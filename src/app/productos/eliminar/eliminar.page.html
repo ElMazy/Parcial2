@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Eliminar Productos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/listar']">Atrás</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        ID # {{producto.id}}
+      </ion-card-subtitle>
+      <ion-card-title>
+        ¿ Desea eliminar a {{producto.title}} ?
+      </ion-card-title>
+
+    <ion-card-content>
+      <strong>Descripción {{producto.description}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Precio {{producto.price}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Descuento% {{producto.discountPercentage}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Rating {{producto.rating}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Stock: {{producto.stock}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Línea{{producto.brand}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Categoría {{producto.category}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Miniatura {{producto.thumbnail}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Imagen {{producto.images}} </strong>
+    </ion-card-content>
+  </ion-card-header>
+
+    <ion-button (click)="eliminarProducto()" expand="block" color="danger">Eliminar</ion-button>
+
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Añadir productos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/listar']">Atrás</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="string" name="titleProducto" [(ngModel)]="nuevoProducto.title" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Descripción</ion-label>
+    <ion-input type="string" name="description" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">price</ion-label>
+    <ion-input type="number" name="priceProducto" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Descuento%</ion-label>
+    <ion-input type="number" name="discountPercentageProducto" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Rating</ion-label>
+    <ion-input type="number" name="ratingProducto" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Stock</ion-label>
+    <ion-input type="number" name="stockProducto" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Categoría</ion-label>
+    <ion-input type="string" name="categoryProducto" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Miniatura</ion-label>
+    <ion-input type="string" name="thumbnailProducto" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Imagen</ion-label>
+    <ion-input type="string[]" name="imagesProducto" required></ion-input>
+
+    <ion-row>
+      <ion-col>
+    <ion-button (click)="crearProducto()" expand="block" color="dark">Agregar Producto</ion-button>
+    </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inicio de Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="tertiary" padding>
+  <form #form="ngForm" (ngSubmit)="ingresar">
+    <ion-grid>
+      <ion-row color="tertiary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Login</h3>
+          </div>
+          <div padding>
+            <form >
+            <ion-item>
+              <ion-input name="usuario" type="user" minlength="5" maxlength="10" placeholder="Nombre de Usuario" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="contrasena" minlength="8" maxlength="16" type="password" placeholder="Contraseña" ngModel required></ion-input>
+            </ion-item>
+          </form>
+          </div>
+          <div padding>
+            <ion-button size="large" type="submit" [routerLink]="'/listar'" [disabled]="form.invalid"  expand="block">Ingresar</ion-button>
+            <h6>No tienes cuenta?</h6>
+            <ion-button size="large" type="submit" [routerLink]="'/registro'" expand="block">Registrarse</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

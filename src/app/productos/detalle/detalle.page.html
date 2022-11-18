@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Detalle producto</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Atrás"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>
+        ID: # {{producto.id}}
+      </ion-card-subtitle>
+      <ion-card-title>
+        Nombre: {{producto.title}}
+      </ion-card-title>
+
+    <ion-card-content>
+      <strong>Descripción: {{producto.description}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Precio: {{producto.price}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Descuento%: {{producto.discountPercentage}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Rating: {{producto.rating}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Stock: {{producto.stock}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Línea: {{producto.brand}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Categoría: {{producto.category}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Miniatura:{{producto.thumbnail}} </strong>
+    </ion-card-content>
+    <ion-card-content>
+      <strong>Imagen: {{producto.images}} </strong>
+    </ion-card-content>
+  </ion-card-header>
+
+    <ion-button [routerLink]="['/actualizar',producto.id]"><ion-icon color="dark" name="create"></ion-icon></ion-button>
+    <ion-button [routerLink]="['/eliminar', producto.id]"><ion-icon color="danger" name="trash"></ion-icon></ion-button>
+
+  </ion-card>
+</ion-content>

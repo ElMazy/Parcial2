@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Lista productos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/anadir']">Añadir</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+Productos :D
+
+
+<ion-list>
+  <ion-item *ngFor="let p of productos; let indexArray = index" [routerLink]="['/detalle',p.id]">
+    <ion-label> {{p.id}} </ion-label>
+    <h1></h1>
+    <ion-label> {{p.title}} </ion-label>
+    <b></b>
+    <ion-label> {{p.description}} </ion-label>
+    <b></b>
+    <ion-label> {{p.brand}} </ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>

@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Actualizar productos</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button text="Atrás"[routerLink]="['/listar', producto.id]"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input type="text" name="titleProducto" [(ngModel)]="producto.title" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Detalle</ion-label>
+    <ion-input type="text" name="descriptionProducto" [(ngModel)]="producto.description"required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Precio</ion-label>
+    <ion-input type="text" name="priceProducto" [(ngModel)]="producto.price" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Descuento%</ion-label>
+    <ion-input type="number" name="discountPercentageProducto" [(ngModel)]="producto.discountPercentage" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Rating</ion-label>
+    <ion-input type="String" name="ratingProducto" [(ngModel)]="producto.rating" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Stock</ion-label>
+    <ion-input type="boolean" name="stockProducto" [(ngModel)]="producto.stock" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Línea</ion-label>
+    <ion-input type="boolean" name="brandProducto" [(ngModel)]="producto.brand" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Categoría</ion-label>
+    <ion-input type="text" name="categoryProducto" [(ngModel)]="producto.category"required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Miniatura</ion-label>
+    <ion-input type="number" name="thumbnailProducto"[(ngModel)]="producto.thumbnail" required></ion-input>
+
+    <ion-item lines="Full"></ion-item>
+    <ion-label position="floating">Imagen</ion-label>
+    <ion-input type="number" name="imagesProducto"[(ngModel)]="producto.images" required></ion-input>
+
+    <ion-row>
+      <ion-col>
+    <ion-button (click)="actualizarProducto()" expand="block" color="dark">Actualizar Producto</ion-button>
+    </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

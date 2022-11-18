@@ -1,0 +1,45 @@
+ion-menu-button {
+  color: var(--ion-color-primary);
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+ion-fab-button {
+  height: 80px;
+  width: 80;
+}
+.cart-icon {
+  font-size: 60px;
+}
+.cart-lenght {
+  color: var(--ion-color-tertiary);
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  font-weight: 550;
+  font-size: 1em;
+  min-width: 26px;
+  z-index: 10;
+}
